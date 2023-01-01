@@ -15,18 +15,24 @@ body{
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .container{
     background-color: white;
     border-radius: 0.5rem;
     margin: 1rem 0;
+    width: 20rem;
 }
 
-.container > img{
+.mobile{
     width: 100%;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+}
+
+.desktop{
+    display: none;
 }
 
 .product{
@@ -86,6 +92,10 @@ body{
     justify-content: center;
 }
 
+.buyProduct:hover{
+    background-color: hsl(159, 53%, 17%);
+}
+
 .buyProduct > *{
     margin: 0 0.4rem;
     
@@ -102,4 +112,29 @@ body{
 
 .format > *{
     margin: 0.7rem 1rem;
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+    .mobile{
+        display: none;
+    }
+    .desktop{
+        display: block;
+        max-width: 100%;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .picture{
+        width: 200%;
+    }
+
+    .container{
+        display: flex;
+        border-radius: 0.5rem;
+        width: 32rem;
+    }
+
 }
